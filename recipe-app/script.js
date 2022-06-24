@@ -1,5 +1,9 @@
-const meals = document.getElementById("meals");
+const mealsEl = document.getElementById("meals");
 const favoriteContainer = document.getElementById("fav-meals");
+
+const mealPopup = document.getElementById("meal-popup");
+const mealInfoEl = document.getElementById("meal-info");   
+const popupCloseBtn = document.getElementById("close-popup");
 
 const searchTerm = document.getElementById("search-term");
 const searchBtn = document.getElementById("search");
@@ -14,10 +18,9 @@ async function getRandomMeal() {
     const respData = await resp.json();
     const randomMeal = respData.meals[0];
 
-    console.log(randomMeal);
-
     addMeal(randomMeal, true);
 }
+
 
 async function getMealById(id) {
     const resp = await fetch(
@@ -30,6 +33,8 @@ async function getMealById(id) {
     return meal;
 }
 
+
+
 async function getMealsBySearch(term) {
     const resp = await fetch(
         "https://www.themealdb.com/api/json/v1/1/search.php?s=" + term
@@ -40,6 +45,8 @@ async function getMealsBySearch(term) {
 
     return meals;
 }
+
+
 
 function addMeal(mealData, random = false) {
 
@@ -74,12 +81,20 @@ function addMeal(mealData, random = false) {
             addMealLS(mealData.idMeal);
             btn.classList.add("active");
         }
+
         fetchFavMeals();
+
     });
 
-meals.appendChild(meal);
+    meal.addEventListener('click', () => {
+        showMealInfo(mealData);
+    });
+
+    mealsEl.appendChild(meal);
 
 }
+
+
 
 
 function addMealLS(mealId){
@@ -89,6 +104,7 @@ function addMealLS(mealId){
     ([...mealIds, mealId]));
 }
 
+
 function removeMealLS(mealId){
     const mealIds = getMealsLS();
 
@@ -96,12 +112,14 @@ function removeMealLS(mealId){
     (mealIds.filter(id => id !== mealId)));
 }
 
+
 function getMealsLS() {
     const mealIds = JSON.parse(localStorage.
     getItem('mealIds'));
 
     return mealIds === null ? [] : mealIds;
 }
+
 
 // creating the function to add favorite meals to up
 
@@ -119,6 +137,7 @@ async function fetchFavMeals() {
     }
 
 }
+
 
 function addMealFav(mealData) {
     const favMeal = document.createElement("li");
@@ -139,21 +158,79 @@ function addMealFav(mealData) {
                     fetchFavMeals();
             });
 
+            favMeal.addEventListener("click", () => {
+                showMealInfo(mealData);
+            });
         favoriteContainer.appendChild(favMeal);
 }
+
+
+// Display the Meal Information
+function showMealInfo(mealData){
+    //clean it up
+    mealInfoEl.innerHTML = '';
+
+    //Update the Meal Info
+    const mealEl = document.createElement('div');
+
+
+    const ingredients = [];
+    //get ingredients and measures
+    for(let i = 1; i <= 20; i++){
+            if(mealData["strIngredient" + i]){
+                ingredients.push(
+                    `${mealData["strIngredient" + i]}
+                    - ${
+                        mealData["strMeasure" + i]
+                    }`
+                );
+            }else{
+                break;
+            }
+    }
+
+    mealEl.innerHTML = `
+        <h1>${mealData.strMeal}</h1>
+        <img src="${mealData.strMealThumb}" alt="">
+        <p>
+            ${mealData.strInstructions}
+        </p>
+        <h3>Ingredients:</h3>
+        <ul>
+        ${ingredients.map((ing) => `
+            <li>${ing}</li>
+        `).join('')}
+        </ul>
+    `;
+
+    mealInfoEl.appendChild(mealEl);
+
+    //show the popup
+    mealPopup.classList.remove("hidden");
+}
+
+
+
 //search button function
-
 searchBtn.addEventListener('click', async () => {
-    const search = searchTerm.value;
+    //clean container
+    mealsEl.innerHTML ="";
 
+    const search = searchTerm.value;
     const meals = await getMealsBySearch(search);
     
-    meals.forEach((meal) => {
+    if(meals){    
+        meals.forEach((meal) => {
         addMeal(meal);
     });
+    }
 });
 
+//Pop Up Details of a single meal
 
+popupCloseBtn.addEventListener("click", () => {
+   mealPopup.classList.add("hidden");
+});
 
 
 
