@@ -17,3 +17,34 @@ body{
     height: 400px;
     width: 400px;
 }
+.notes .tools {
+    background-color: #9ec862;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+}
+.notes .tools button{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.notes .main{
+    display: none;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+}
+.notes textarea{
+    outline: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border: none;
+    height: 400px;
+    width: 100%;
+}
+.notes .hidden{
+    display: none;
+}
