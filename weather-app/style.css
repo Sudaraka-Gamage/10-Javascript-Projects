@@ -21,6 +21,7 @@ input{
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     font-family: inherit;
+    font-size: 1rem;
     padding: 1rem;
     min-width: 300px;
 }
@@ -33,4 +34,9 @@ input:focus{
 }
 .weather h2{
     margin-bottom: 0;
+}
+.weather img{
+    display: flex;
+    align-items: center;
+    transform: scale(0.5);
 }
