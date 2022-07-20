@@ -22,6 +22,8 @@
 
 # Github-Profile App
 ![Screenshot (1593)](https://user-images.githubusercontent.com/86683029/179924820-719807a5-bb96-4431-a800-0573b8bef142.png)
+![Screenshot (1592)](https://user-images.githubusercontent.com/86683029/179924924-1ae005e4-10f5-45e6-a407-8000e8b81524.png)
+![Screenshot (1594)](https://user-images.githubusercontent.com/86683029/179924942-e3a962b5-420d-4999-8233-42faba6d1e75.png)
 
 # Movie-App
 # Notes-App
