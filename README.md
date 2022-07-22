@@ -26,6 +26,15 @@
 ![Screenshot (1594)](https://user-images.githubusercontent.com/86683029/179924942-e3a962b5-420d-4999-8233-42faba6d1e75.png)
 
 # Movie-App
+![Screenshot (1588)](https://user-images.githubusercontent.com/86683029/180359742-c99ed69b-2394-46f1-99d8-ceb924c4bb91.png)
+![Screenshot (1589)](https://user-images.githubusercontent.com/86683029/180359770-a46b1a24-5fe1-4a75-b5fb-e86bafe2fbaa.png)
+![Screenshot (1590)](https://user-images.githubusercontent.com/86683029/180359774-9c0c4a6d-390c-4dd7-a3ab-5333a5cbfd03.png)
+![Screenshot (1584)](https://user-images.githubusercontent.com/86683029/180359797-a49f59e5-adea-4681-8647-3df7d9bf7e46.png)
+![Screenshot (1585)](https://user-images.githubusercontent.com/86683029/180359827-6ff6790b-bae3-4b86-8915-5fc95e63f2ac.png)
+![Screenshot (1586)](https://user-images.githubusercontent.com/86683029/180359888-b9394824-5dbb-4ab9-ad76-75cd782078b0.png)
+![Screenshot (1587)](https://user-images.githubusercontent.com/86683029/180359904-a0f3108d-d3be-440c-8fcf-f40aac77bcf6.png)
+  
+
 # Notes-App
 # Notes App
 # ToDo-app
