@@ -36,6 +36,10 @@
   
 
 # Notes-App
-# Notes App
+![Screenshot (1584)](https://user-images.githubusercontent.com/86683029/180637866-b9198084-5a4e-44b6-8739-c25c7bb1620f.png)
+![Screenshot (1585)](https://user-images.githubusercontent.com/86683029/180637867-22d74f36-7ff3-4894-8108-fb5237a91694.png)
+![Screenshot (1586)](https://user-images.githubusercontent.com/86683029/180637868-65817689-54c3-4957-ba7c-544e54bd655f.png)
+
+
 # ToDo-app
 # Weather App
