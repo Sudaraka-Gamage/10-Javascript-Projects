@@ -48,3 +48,6 @@
 
 
 # Weather App
+![Screenshot (1599)](https://user-images.githubusercontent.com/86683029/180951291-1efeda13-f6c3-4274-adab-e9ffe9ef4fca.png)
+![Screenshot (1600)](https://user-images.githubusercontent.com/86683029/180951302-a37327d8-8815-4669-bd0d-1a2f44da4e93.png)
+
